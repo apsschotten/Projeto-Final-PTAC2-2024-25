@@ -1,0 +1,201 @@
+body {
+    background: repeating-linear-gradient(90deg,
+            #e498bd,
+            #e498bd 20px,
+            #cf6699 20px,
+            #cf6699 40px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.BodyR {
+    margin-top: 50px;
+    background-color: #e9e9e9;
+    width: 1000px;
+    border-radius: 25px;
+}
+
+header {
+    background-color: #ee7db2;
+    border-radius: 24px 24px 0px 0px;
+}
+
+.Btns {
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px;
+    margin-bottom: 30px;
+    justify-content: center;
+}
+
+.BtnsBtn {
+    cursor: pointer;
+    background-color: #ee7db2;
+    border: none;
+    color: #fff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+    border-radius: 15px;
+    width: 150px;
+}
+
+.BtnsBtn:hover {
+    transition: 0.5s;
+    cursor: pointer;
+    background-color: #852853;
+    color: #fff;
+}
+
+.ImageHead {
+    height: 145px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.OutCard {
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    column-gap: 25px;
+}
+
+.InCard {
+    background-color: #fff;
+    display: grid;
+    grid-template-rows: 150px 75px 50px;
+    align-items: center;
+    width: 300px;
+    border-radius: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.ImageProd {
+    padding-top: 20px;
+    height: 150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.NameProd {
+    padding-top: 15px;
+}
+
+.PriceProd {
+    margin-bottom: 5px;
+    font-size: large;
+}
+
+.ButtonProd {
+    width: 300px;
+    height: 50px;
+    border-radius: 0px 0px 14px 14px;
+    cursor: pointer;
+    background-color: #ee7db2;
+    border: none;
+    color: #fff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+    margin-bottom: 0px;
+}
+
+.ButtonProd:hover {
+    transition: 0.5s;
+    cursor: pointer;
+    background-color: #852853;
+    color: #fff;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #ee7db2;
+    color: #fff;
+    height: 50px;
+    border-radius: 0px 0px 24px 24px;
+    margin-bottom: 50px;
+}
+
+.FootDeco {
+    height: 50px;
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+.Load {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.LoadImage {
+    height: 100px;
+}
+
+.LoadImageExt {
+    margin-top: 20px;
+    height: 100px;
+}
+
+.BtnsHeader {
+    display: grid;
+}
+
+.BtnHeader {
+    cursor: pointer;
+    background-color: #e970a9;
+    border: none;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.BtnHeader:hover {
+    transition: 0.5s;
+    cursor: pointer;
+    background-color: #b44478;
+}
+
+.TxtBtnHeader {
+    color: #fff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+    text-decoration: none;
+    text-align: center;
+}
+
+.Dividers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Divider {
+    height: 25px;
+}
+
+.Title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 35px;
+}
+
+.TitleDiv{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
