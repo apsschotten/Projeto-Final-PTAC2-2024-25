@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
 import Loading from "./Loading";
 import '../styles/styles.css';
+import { jsPDF } from "jspdf";
+import "jspdf-autotable";
 
 export default function Pessoas() {
-
     const [lista, setLista] = useState([]);
 
     useEffect(() => {
-        const receberListaUsuários = async () => {
+        const buscarListaUsuários = async () => {
             try {
                 const resposta = await fetch('src/objects/Users.json');
                 const dados = await resposta.json();
@@ -16,7 +17,7 @@ export default function Pessoas() {
                 alert("Ocorreu um erro.")
             }
         }
-        receberListaUsuários();
+        buscarListaUsuários();
     }, []);
 
     if (lista.length === 0) {
@@ -35,8 +36,24 @@ export default function Pessoas() {
         setLista(listaAux);
     }
 
+    const exportarPDFPessoas = () => {
+        const doc = new jsPDF();
+        const usersDados = lista.map((user) => [
+            user.id,
+            user.nome,
+            user.email,
+            user.favPlush
+        ]);
 
-    
+        doc.text("Lista de Usuários", 10, 10);
+        doc.autoTable({
+            head: [["ID", "Nome", "Preço", "Pelúcia Favorita"]],
+            body: usersDados,
+        });
+
+        doc.save("users.pdf");
+    }
+
     return (
         <>
             <div className="Bdy">
@@ -56,6 +73,9 @@ export default function Pessoas() {
                             )
                         }
                     </div>
+                </div>
+                <div className="PDFDiv">
+                    <button onClick={() => exportarPDFPessoas()} className="PDFBtn">Gerar PDF</button>
                 </div>
             </div>
         </>

@@ -253,20 +253,20 @@ footer {
     justify-content: center;
 }
 
-.RegIn{
+.RegIn {
     height: 35px;
     margin-top: 15px;
     margin-bottom: 50px;
 }
 
-.RegInOne{
+.RegInOne {
     height: 35px;
     border-radius: 15px 0px 0px 15px;
     border-style: solid;
     border-width: 1px;
 }
 
-.RegInBtn{
+.RegInBtn {
     height: 40px;
     border-radius: 0px 15px 15px 0px;
     border-style: none;
@@ -281,6 +281,28 @@ footer {
 
 .RegInBtn:hover {
     transition: 0.5s;
-    cursor: pointer;
     background-color: #b44478;
+}
+
+.PDFBtn {
+    height: 40px;
+    border-radius: 10px;
+    border-style: none;
+    cursor: pointer;
+    background-color: #e970a9;
+    color: #fff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.PDFBtn:hover {
+    transition: 0.5s;
+    background-color: #b44478;
+}
+
+.PDFDiv {
+    display: grid;
+    justify-content: center;
 }

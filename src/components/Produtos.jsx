@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import Loading from "./Loading";
+import { jsPDF } from "jspdf";
+import "jspdf-autotable";
 
 export default function Produtos() {
 
@@ -44,6 +46,23 @@ export default function Produtos() {
         setLista(listaAux);
     }
 
+    const exportarPDFProdutos = () => {
+        const doc = new jsPDF();
+        const produtosDados = lista.map((produto) => [
+            produto.id,
+            produto.nome,
+            produto.preço
+        ]);
+
+        doc.text("Lista de Produtos", 10, 10);
+        doc.autoTable({
+            head: [["ID", "Nome", "Preço"]],
+            body: produtosDados,
+        });
+
+        doc.save("produtos.pdf");
+    }
+
     return (
         <>
             <div className="Bdy">
@@ -61,11 +80,14 @@ export default function Produtos() {
                                     <img src={produto.imagem} className="ImageProd" />
                                     <h3 className="NameProd">{produto.nome}</h3>
                                     <h3 className="preçoProd">R${produto.preço}</h3>
-                                    <button onClick={() => adicionarItemPedidos(produto)} className="ButtonProd">Comprar!</button>
+                                    <button className="ButtonProd">Comprar!</button>
                                 </li>
                             )
                         }
                     </div>
+                </div>
+                <div className="PDFDiv">
+                    <button onClick={() => exportarPDFProdutos()} className="PDFBtn">Gerar PDF</button>
                 </div>
             </div>
         </>
