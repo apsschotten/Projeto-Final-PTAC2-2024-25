@@ -7,11 +7,14 @@ export default function Produtos() {
 
     useEffect(() => {
         const receberListaProdutos = async () => {
-            const resposta = await fetch('src/objects/Produtos.json');
-            const dados = await resposta.json();
-            setLista(dados);
+            try {
+                const resposta = await fetch('src/objects/Produtos.json');
+                const dados = await resposta.json();
+                setLista(dados);
+            } catch {
+                alert("Ocorreu um erro.")
+            }
         }
-
         receberListaProdutos();
     }, []);
 

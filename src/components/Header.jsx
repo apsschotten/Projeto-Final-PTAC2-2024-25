@@ -13,6 +13,11 @@ export default function Header() {
                     <p>Página Inicial</p>
                 </Link>
             </button>
+            <button className="BtnHeader">
+                <Link to="/Registrar" className="TxtBtnHeader">
+                    <p>Usuários & Cadastro</p>
+                </Link>
+            </button>
             </div>
         </>
     );

@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "nome": "Ana Paula dos Santos Schotten",
+        "email": "anapschotten@gmail.com",
+        "favPlush": "Ursinho Pimpão"
+    },
+    {
+        "id": 2,
+        "nome": "Dmitri Tippens Krushnic",
+        "email": "dmitri.krushnic@hotmail.com",
+        "favPlush": "Pelúcia Dean Winchester"
+    },
+    {
+        "id": 3,
+        "nome": "James Joseph Parsons",
+        "email": "jim.parsons@tuta.net",
+        "favPlush": "Pelúcia Pikachu"
+    }
+]
